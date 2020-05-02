@@ -20,7 +20,8 @@ for details on configuring this project to bundle and minify static web assets. 
 }
 
 .card-columns .card-img {
-    height: 330px;
+    height: 450px;
+    /*width: 315px;*/
     vertical-align: bottom;
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
@@ -151,4 +152,44 @@ ul {
     background: -o-linear-gradient(110deg, #252152 60%, #e9a8a6 60%);
     background: -moz-linear-gradient(110deg, #252152 60%, #e9a8a6 60%);
     background: linear-gradient(110deg, #252152 60%, #e9a8a6 60%);
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px,0px;
+}
+
+    .separator::before, .separator::after {
+        content: '';
+        flex: 1;
+        border-bottom: 1px solid #000;
+    }
+
+    .separator::before {
+        margin-right: .25em;
+    }
+
+    .separator::after {
+        margin-left: .25em;
+    }
+
+
+
+.hide-on-mobile {
+    display: inline;
+}
+
+/* Smartphone Portrait and Landscape */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .hide-on-mobile {
+        display: none;
+    }
+}
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(37,33,82,.12), 0 4px 8px rgba(37,33,82,.06);
+    /*-webkit-box-shadow:0 0 21px rgba(0,0,0,0.10)*/
 }
