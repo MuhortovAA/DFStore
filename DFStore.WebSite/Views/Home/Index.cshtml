@@ -68,32 +68,36 @@
     <div class="card-group">
         @foreach (var product in Model)
         {
-            <div class="product card col-12 col-sm-12 col-lg-3">
-                <div class="card-img img-thumbnail" style="background-image: url('@product.Image')"><span class="badge-dark badge justify-content-around">новый</span></div>
-                <div class="card-body justify-content-between text-center">
-                    <h5 class="card-title">@product.Title</h5>
-                    <div class="card-price">@product.Price руб</div>
-
-                </div>
+        <div class="product card col-12 col-sm-12 col-lg-3 p-2">
+            <div class="card-img mt-3 ml-auto mr-auto" style="background-image: url('@product.Image')"></div>
+            <div class="card-img-overlay card-inverse">
+                <span class="badge-dark badge justify-content-around">новый</span>
             </div>
+            <div class="card-body justify-content-center text-center">
+                <h5 class="card-title">@product.Title</h5>
+                <div class="card-price">@product.Price руб</div>
+
+            </div>
+        </div>
         }
     </div>
 </div>
 
 <div class="separator m-3">ПОПУЛЯРНЫЕ ТОВАРЫ</div>
-<div class="container">
-    <div class="card-columns">
+
+<div class="container flex-row">
+    <div class="card-group">
 
         @foreach (var product in Model)
         {
-            <div class="card">
-                <div class="card-img" style="background-image: url('@product.Image')"></div>
-                <div class="card-body justify-content-between text-center">
-                    <h5 class="card-title text-center">@product.Title</h5>
-                    <h5 class="card-text text-center">@product.Price руб</h5>
+        <div class="product card col-12 col-sm-12 col-lg-3">
+            <div class="card-img mt-3" style="background-image: url('@product.Image')"></div>
+            <div class="card-body justify-content-between text-center">
+                <h5 class="card-title text-center text-muted">@product.Title</h5>
+                <h5 class="card-text text-center text-muted">@product.Price руб</h5>
 
-                </div>
             </div>
+        </div>
         }
     </div>
 </div>
